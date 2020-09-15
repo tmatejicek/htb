@@ -1,0 +1,40 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+header h1 {
+    margin:0;
+}
+
+header h1:before {
+    content:"";
+    font-size:24px
+}
+
+.inline {
+    display:inline
+}
+
+.text-light {
+    color:#eaeaea;
+}
+
+.text-blue {
+    color:#63c0f5;
+}
+
+.header-links {
+    text-align:left
+}
+
+.header-links a {
+    display:inline
+}
+
+.pagination, footer {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-top: 1px dashed #b5e853;
+}
