@@ -3,10 +3,10 @@ layout: post
 author: Tomáš Matějíček
 title: "Bankrobber"
 date: 2019-11-28
-tags: windows sql-injection command-injection brute-force buffer-overflow
+tags: windows xss sql-injection command-injection brute-force buffer-overflow
 ---
 
-[Bankrobber](https://www.hackthebox.eu/home/machines/profile/209) patří mezi těžší windowsové boxy.
+[Bankrobber](https://www.hackthebox.eu/home/machines/profile/209) patří mezi těžší windowsové boxy. Nejdříve prozkoumáš webovou aplikaci, najdeš slabinu v práci s Cookies a zranitelnost typu XSS. Po přihlášení jako správce webové aplikace najdeš ještě zranitelnosti SQL Injection a Command Injection. Až díky kombinaci posledně jmenovaných zranitelností získáš počáteční přístup. Pak zjistíš že na serveru běží služba s vysokými právy, prolomíš PIN a zneužiješ Buffer Overflow zranitelnost na vstupu ke spuštění vlastního příkazu a tím získáš systémová oprávní.
 
 ### Vyhledání otevřených portů
 `IP=10.10.10.154;ports=$(nmap -p- --min-rate=1000 -T4 $IP | grep ^[0-9] | cut -d "/" -f 1 | tr "\n"​ "," | sed s/,$//);nmap -p $ports -A -sC -sV -v $IP`
