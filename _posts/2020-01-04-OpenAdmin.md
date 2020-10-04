@@ -3,10 +3,10 @@ layout: post
 author: Tomáš Matějíček
 title: "OpenAdmin"
 date: 2020-01-04
-tags: exploit sudo
+tags: linux exploit sudo
 ---
 
-[OpenAdmin](https://www.hackthebox.eu/home/machines/profile/222) je jednoduchý box. Počáteční přístup získáš využitím OpenNetAdmin RCE a na úroveň uživatele se posuneš díky nalezenému heslu. Pak pomocí SSH přesměrování portů získáš přístup k internímu webu a tím i k zašifrovanému SSH privátnímu klíči. Po prolomení hesla získáš přístup k druhému uživateli. Zvýšení oprávnění na správce provedeš pomocí kombinace sudo a nano.
+[OpenAdmin](https://www.hackthebox.eu/home/machines/profile/222) je jednoduchý linuxový box. Počáteční přístup získáš využitím OpenNetAdmin RCE a na úroveň uživatele se posuneš díky nalezenému heslu. Pak pomocí SSH přesměrování portů získáš přístup k internímu webu a tím i k zašifrovanému SSH privátnímu klíči. Po prolomení hesla získáš přístup k druhému uživateli. Zvýšení oprávnění na správce provedeš pomocí kombinace sudo a nano.
 
 ### Vyhledání otevřených portů
 `IP=10.10.10.171;ports=$(nmap -p- --min-rate=1000 -T4 $IP | grep ^[0-9] | cut -d "/" -f 1 | tr "\n"​ "," | sed s/,$//);nmap -p $ports -A -sC -sV -v $IP`
