@@ -8,7 +8,7 @@ tags: LFI PHP
 
 Zranitelnost File Inclusion umožňuje utočníkovi začlenit do zpracování skriptu požadovaný soubor a tím ovlivnit běh aplikace. Tato zranitelnost obvykle vzniká neošetřeným uživatelským vstupem.
 
-Ovivnění běhu aplikace může mít tyto podoby:
+Ovlivnění běhu aplikace může mít tyto podoby:
  - Vypsání obsahu požadovaného souboru
  - Provádění kódu na webovém serveru
  - Spuštění kódu na straně klienta, jako je JavaScript, což může vést k dalším útokům, jako je skriptování napříč weby (XSS)
