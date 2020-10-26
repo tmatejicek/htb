@@ -11,7 +11,7 @@ Zranitelnost File Inclusion umožňuje utočníkovi začlenit do zpracování sk
 Ovlivnění běhu aplikace může mít tyto podoby:
  - Vypsání obsahu požadovaného souboru
  - Provádění kódu na webovém serveru
- - Spuštění kódu na straně klienta, jako je JavaScript, což může vést k dalším útokům, jako je skriptování napříč weby (XSS)
+ - Spuštění kódu na straně klienta, jako je JavaScript, což může vést k dalším útokům, jako je Cross-site scripting (XSS)
  - Odepření služby (DoS)
  
 ### Scénář č. 1
